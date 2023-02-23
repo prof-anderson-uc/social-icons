@@ -1,0 +1,162 @@
+/* Copy all of this CSS into your style sheet */
+
+.social-btns .btn,
+.social-btns .btn:before,
+.social-btns .btn .fa {
+  transition: all 0.35s;
+  transition-timing-function: cubic-bezier(0.31, -0.105, 0.43, 1.59);
+}
+
+.social-btns .btn:before {
+  top: 90%;
+  left: -110%;
+}
+
+.social-btns .btn .fa {
+  transform: scale(0.8);
+}
+
+
+/* YouTube
+-------------------------------------*/
+.social-btns .btn.youtube:before {
+  background-color: #dc4a38; /* hover color */
+}
+
+.social-btns .btn.youtube .fa {
+  color: #dc4a38; /* logo color */
+}
+
+
+/* Instagram
+-------------------------------------*/
+.social-btns .btn.instagram:before {
+  background-color: #C13584; /* hover color */
+}
+
+.social-btns .btn.instagram .fa {
+  color: #C13584; /* logo color */
+}
+
+
+/* Facebook
+-------------------------------------*/
+.social-btns .btn.facebook:before {
+  background-color: #3b5998; /* hover color */
+}
+
+.social-btns .btn.facebook .fa {
+  color: #3b5998; /* logo color */
+}
+
+
+/* Twitter
+-------------------------------------*/
+.social-btns .btn.twitter:before {
+  background-color: #00aff0; /* hover color */
+}
+
+.social-btns .btn.twitter .fa {
+  color: #00aff0; /* logo color */
+}
+
+
+/* LinkedIn
+-------------------------------------*/
+.social-btns .btn.linkedin:before {
+  background-color: #2867B2; /* hover color */
+}
+
+.social-btns .btn.linkedin .fa {
+  color: #2867B2; /* logo color */
+}
+
+
+/* Soundcloud
+-------------------------------------*/
+.social-btns .btn.soundcloud:before {
+  background-color: #FE5000; /* hover color */
+}
+
+.social-btns .btn.soundcloud .fa {
+  color: #FE5000; /* logo color */
+}
+
+
+/* Spotify
+-------------------------------------*/
+.social-btns .btn.spotify:before {
+  background-color: #1DB954; /* hover color */
+}
+
+.social-btns .btn.spotify .fa {
+  color: #1DB954; /* logo color */
+}
+
+
+/* Twitch
+-------------------------------------*/
+.social-btns .btn.twitch:before {
+  background-color: #6441A4; /* hover color */
+}
+
+.social-btns .btn.twitch .fa {
+  color: #6441A4; /* logo color */
+}
+
+
+
+
+/* CONTAINER AREA
+-------------------------------------*/
+
+.social-btns { /* area that holds buttons */
+  background-color: #e4e4e4; /* grey background color */
+	display: flex;
+	flex-direction: row; /* can be changed to column */
+	align-items: center; /*cross axis */
+	justify-content: center; /* change to space-around 
+															to distribute buttons 
+															across entire width */	
+}
+
+.social-btns .btn:focus:before,
+.social-btns .btn:hover:before {
+  top: -10%;
+  left: -10%;
+}
+
+.social-btns .btn:focus .fa,
+.social-btns .btn:hover .fa {
+  color: #fff; /* logo color on hover */
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.social-btns .btn { /* buttons */
+  background-color: white; /* color inside buttons */
+  width: 50px; /* size of buttons */
+  height: 50px; /* size of buttons */
+  margin: 10px; /* space around buttons */
+	display: flex;
+	align-items: center; /* keeps logo in center of button */
+	justify-content: center; /* keeps logo in center of button */
+  position: relative;
+  overflow: hidden; /* hides hover color */
+  border-radius: 30%;
+  box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.3);
+  opacity: 0.99;
+	text-decoration: none;
+}
+
+.social-btns .btn:before {
+  content: "";
+  width: 120%;
+  height: 120%;
+  position: absolute;
+  transform: rotate(45deg);
+}
+
+.social-btns .btn .fa {
+  font-size: 35px; /*size of logo inside button */
+}
