@@ -1,162 +1,163 @@
-/* Copy all of this CSS into your style sheet */
+h1 {
+   font-size: 200%;
+   text-align: center;
+   margin: 1rem;
+}
 
+
+/* Base Transitions 
+======================= */
+/* These transitions apply to the button container, the icon, and the background */
 .social-btns .btn,
 .social-btns .btn:before,
 .social-btns .btn .fa {
-  transition: all 0.35s;
-  transition-timing-function: cubic-bezier(0.31, -0.105, 0.43, 1.59);
+   transition: all 0.35s;
+   transition-timing-function: cubic-bezier(0.31, -0.105, 0.43, 1.59);
+   /* Adds bounce effect */
 }
 
+/* Initial off-screen position for the background overlay */
 .social-btns .btn:before {
-  top: 90%;
-  left: -110%;
+   top: 90%;
+   left: -110%;
 }
 
+/* Slightly shrink the icon at rest */
 .social-btns .btn .fa {
-  transform: scale(0.8);
+   transform: scale(0.8);
 }
 
 
-/* YouTube
--------------------------------------*/
+/* Individual Platform Colors
+======================= */
+/* Each platform has its own brand color for the hover background and icon color */
+
 .social-btns .btn.youtube:before {
-  background-color: #dc4a38; /* hover color */
+   background-color: #dc4a38;
 }
 
 .social-btns .btn.youtube .fa {
-  color: #dc4a38; /* logo color */
+   color: #dc4a38;
 }
 
 
-/* Instagram
--------------------------------------*/
 .social-btns .btn.instagram:before {
-  background-color: #C13584; /* hover color */
+   background-color: #C13584;
 }
 
 .social-btns .btn.instagram .fa {
-  color: #C13584; /* logo color */
+   color: #C13584;
 }
 
 
-/* Facebook
--------------------------------------*/
 .social-btns .btn.facebook:before {
-  background-color: #3b5998; /* hover color */
+   background-color: #3b5998;
 }
 
 .social-btns .btn.facebook .fa {
-  color: #3b5998; /* logo color */
+   color: #3b5998;
 }
 
 
-/* Twitter
--------------------------------------*/
 .social-btns .btn.twitter:before {
-  background-color: #00aff0; /* hover color */
+   background-color: #00aff0;
 }
+
 
 .social-btns .btn.twitter .fa {
-  color: #00aff0; /* logo color */
+   color: #00aff0;
 }
 
-
-/* LinkedIn
--------------------------------------*/
 .social-btns .btn.linkedin:before {
-  background-color: #2867B2; /* hover color */
+   background-color: #2867B2;
 }
 
 .social-btns .btn.linkedin .fa {
-  color: #2867B2; /* logo color */
+   color: #2867B2;
 }
 
 
-/* Soundcloud
--------------------------------------*/
 .social-btns .btn.soundcloud:before {
-  background-color: #FE5000; /* hover color */
+   background-color: #FE5000;
 }
 
 .social-btns .btn.soundcloud .fa {
-  color: #FE5000; /* logo color */
+   color: #FE5000;
 }
 
 
-/* Spotify
--------------------------------------*/
 .social-btns .btn.spotify:before {
-  background-color: #1DB954; /* hover color */
+   background-color: #1DB954;
 }
 
 .social-btns .btn.spotify .fa {
-  color: #1DB954; /* logo color */
+   color: #1DB954;
 }
 
 
-/* Twitch
--------------------------------------*/
 .social-btns .btn.twitch:before {
-  background-color: #6441A4; /* hover color */
+   background-color: #6441A4;
 }
 
 .social-btns .btn.twitch .fa {
-  color: #6441A4; /* logo color */
+   color: #6441A4;
 }
 
-
-
-
-/* CONTAINER AREA
--------------------------------------*/
-
-.social-btns { /* area that holds buttons */
-  background-color: #e4e4e4; /* grey background color */
-	display: flex;
-	flex-direction: row; /* can be changed to column */
-	align-items: center; /*cross axis */
-	justify-content: center; /* change to space-around 
-															to distribute buttons 
-															across entire width */	
+/* Button Container Layout
+======================= */
+.social-btns {
+   background-color: #e4e4e4; /* Light gray background */
+   display: flex;
+   align-items: center; /* Vertically center items */
+   justify-content: center; /* Center buttons horizontally */
 }
 
+/* Hover & Focus States
+======================= */
+/* Move background into view */
 .social-btns .btn:focus:before,
 .social-btns .btn:hover:before {
-  top: -10%;
-  left: -10%;
+   top: -10%;
+   left: -10%;
 }
 
+/* Enlarge icon and change to white */
 .social-btns .btn:focus .fa,
 .social-btns .btn:hover .fa {
-  color: #fff; /* logo color on hover */
-  -webkit-transform: scale(1);
-  transform: scale(1);
+   color: #fff;
+   transform: scale(1);
 }
 
-.social-btns .btn { /* buttons */
-  background-color: white; /* color inside buttons */
-  width: 50px; /* size of buttons */
-  height: 50px; /* size of buttons */
-  margin: 10px; /* space around buttons */
-	display: flex;
-	align-items: center; /* keeps logo in center of button */
-	justify-content: center; /* keeps logo in center of button */
-  position: relative;
-  overflow: hidden; /* hides hover color */
-  border-radius: 30%;
-  box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.3);
-  opacity: 0.99;
-	text-decoration: none;
+/* Individual Button Styles 
+======================= */
+.social-btns .btn {
+   background-color: white;
+   width: 50px;
+   height: 50px;
+   margin: 10px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: relative;
+   overflow: hidden;
+   border-radius: 30%;
+   box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.3);
+   opacity: 0.99;
+   text-decoration: none;
 }
 
+/* Hover Background Overlay 
+======================= */
 .social-btns .btn:before {
-  content: "";
-  width: 120%;
-  height: 120%;
-  position: absolute;
-  transform: rotate(45deg);
+   content: "";
+   width: 120%;
+   height: 120%;
+   position: absolute;
+   transform: rotate(45deg); /* Diagonal movement */
 }
 
+/* Font Awesome Icon Size 
+======================= */
 .social-btns .btn .fa {
-  font-size: 35px; /*size of logo inside button */
+   font-size: 2rem;
 }
